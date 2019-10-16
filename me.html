@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .sarahs {
+        background-image: url("https://i.pinimg.com/originals/5e/8a/7b/5e8a7b9a944d42cf6358d96927661dbd.jpg");
+    }
+
+    .sarahj-effect:hover {
+        animation-name: slide transform:rotateZ(100rad);
+        transition-duration: 3s;
+        transition: 1.5s ease-in;
+        background-image: url("https://st2.depositphotos.com/4754361/11134/v/950/depositphotos_111340442-stock-illustration-cartoon-flying-birds-in-clouds.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #sarahj-name:hover {
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        transition: 1.5s ease-in-out;
+        color: purple;
+    }
+
+    body {
+        background-image: url("https://data.whicdn.com/images/136701748/original.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @keyframes expand {
+        0% {
+            font-size: 100%;
+        }
+
+        50% {
+            font-size: 300%;
+            font-family: 'Mark Script', cursive
+        }
+
+        100% {
+            font-size: 100%
+        }
+    }
+
+    .container {
+        width: 15vw;
+        margin: 1%;
+        text-align: center;
+        color: rgb(105, 105, 105);
+        font-size: 18px;
+        display: inline-block;
+        backface-visibility: hidden;
+        transition: 4s ease-in-out;
+        border-radius: 10%
+    }
+
+
+    .headshot {
+        backface-visibility: visible;
+        perspective: 1000;
+        background-color: rgba(245, 245, 245, 0.5);
+        width: 15vw;
+        height: 15vw;
+        position: relative;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10%;
+        top: 0%;
+        left: 0%;
+        margin-bottom: 5%;
+        background-color: rgb(176, 176, 176);
+        border: 1px grey solid;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        /*-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;*/
+        transition: 1.5s ease-in;
+    }
+
+    .your-name {
+        background-color: red;
+        backface-visibility: visible;
+        z-index: 10;
+        position: relative;
+        top: 0%;
+        font-size: 2.5vw;
+        font-family: Quicksand, sans-serif;
+        color: rgb(105, 105, 105);
+    }
+
+    .description-invisible {
+        z-index: -10;
+        opacity: 0;
+        transition: 1.5s ease-in-out;
+        font-family: Quicksand, sans-serif;
+        font-size: 1.25vw;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .description-apparent {
+        transform: rotateY(180deg);
+        z-index: 12;
+        text-align: left;
+        perspective: 1000;
+        transition-delay: 0.5s;
+        transition: 0.1s ease-in;
+        transform: rotateY(-180deg);
+        font-family: Quicksand, sans-serif;
+        font-size: 1.25vw;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        animation-name: fadeToTransparent;
+        animation-duration: 8s;
+        background-color: rgb(176, 176, 176);
+        width: 95%;
+        height: 95%;
+        border-radius: 10%;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 2%;
+    }
+
+    @keyframes fadeToTransparent {
+        0% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        50% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        90% {
+            opacity: 1;
+            z-index: 1000;
+        }
+
+        100% {
+            opacity: 1;
+            z-index: 1000;
+        }
+    }
+
+    .headshot-flip {
+        text-align: right;
+        /*     pointer-events: none; */
+        transform: rotateY(180deg);
+        z-index: -5;
+        width: 15vw;
+        height: 15vw;
+        background-color: rgba(245, 245, 245, 0.5);
+        background-image: url();
+        margin-bottom: 10%;
+        margin-right: 2%;
+        border-radius: 10%;
+        text-align: left;
+        z-index: -10;
+    }
+    </style>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <div class="container" onclick=showDescription() animationend=hideDescription() id="sarahj-name">
+        <div id="sarahj" class="headshot sarahs sarahj-effect">
+            <div id="mollyj-description" class="description description-invisible">
+                <br>
+                <ul>
+                    <li>My favorite color is purple</li>
+                    <li>My first project<a href="https://c23sj1.github.io/">moods
+                        </a>
+                    </li>
+                    <li>Github: <a href="https://github.com/c23sj1">sarahj.github.io</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        Sarah
+    </div>
+    <script type="text/javascript">
+    var headshot = document.getElementsByClassName("headshot");
+    var description = document.getElementsByClassName("description");
+
+    function showDescription() {
+
+        console.log(event);
+        var whoAmI = event.target.id;
+        var containerDivChild = event.target.children;
+        var containerGrandchild = event.target.lastElementChild.lastElementChild;
+
+        for (let item of containerDivChild) {
+            item.classList.add("headshot-flip");
+            item.classList.remove(item.id + "-effect");
+            setTimeout(function() {
+                item.classList.remove("headshot");
+            }, 500);
+            containerGrandchild.classList.remove("description-invisible");
+            containerGrandchild.classList.add("description-apparent");
+        }
+    }
+
+    for (let item of description) {
+        item.addEventListener("animationend", function() {
+            item.classList.remove("description-apparent");
+            item.classList.add("description-invisible");
+            console.log("ended!");
+        });
+    }
+
+    for (let item of headshot) {
+        item.addEventListener("animationend", function() {
+            item.classList.add(item.id + "-effect");
+
+            item.classList.remove("headshot-flip");
+            item.classList.add("headshot");
+        });
+    }
+    </script>
+</body>
+
+</html>
