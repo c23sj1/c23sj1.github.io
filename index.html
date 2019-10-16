@@ -22,7 +22,8 @@
         top: 50%;
         position: absolute;
         left: 45%;
-    }
+/*        line-height:0px;
+*/    }
     #otherthing {
         position: fixed;
         width: 100%;
@@ -30,6 +31,23 @@
         background-image: url("https://ak5.picdn.net/shutterstock/videos/1011341165/thumb/1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+     @media (max-device-width: 667px) {
+        #otherthing {
+            background-repeat:repeat;
+            height:100%;
+        }
+
+      /*  a{
+            font-size:50px;
+        }*/
+
+      /*  body {
+            background-image: url("https://ak5.picdn.net/shutterstock/videos/1011341165/thumb/1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;*/
+        }
     }
     </style>
 </head>
