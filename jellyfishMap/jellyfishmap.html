@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <title></title>
+    <style type="text/css">
+    #everything {
+        background-image: url("giphy.gif");
+        background-repeat: no-repeat;
+        background-position: 0% 23%;
+        background-size: cover;
+        width: 1050px;
+        height: 625px;
+        background-position: center;
+        z-index: -1;
+    }
+
+    .something {
+        width: 50%;
+        height: 100%;
+        /* border: solid;
+        border-color: black;
+        border-size: 1px;*/
+        position: absolute;
+        z-index: 1;
+        background-position: center;
+        /*        background-size: contain;*/
+        background-repeat: no-repeat;
+        font-size: 35px;
+        font-family: 'Kalam', cursive;
+        /*        transition:1s;
+*/
+    }
+
+    #thing1 {
+        left: 0%;
+        background-size: cover;
+    }
+
+    #thing2 {
+        left: 50%;
+        padding: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="everything">
+        <div class="something" id="thing1"></div>
+        <div class="something" id="thing2"></div>
+    </div>
+    <script type="text/javascript">
+        var everything =  document.getElementById("everything");
+    var thingA = document.getElementById("thing1");
+    var thingB = document.getElementById("thing2");
+
+    var helpful = 0;
+
+
+    document.body.addEventListener("keydown", function(x) {
+        console.log(x.keyCode);
+
+        if (x.keyCode == 65) {
+            helpful = helpful + 1;
+            console.log(helpful);
+
+            if (helpful % 2 == 1) {
+                thingA.style.backgroundImage = "url(a.gif)";
+                thingB.style.backgroundColor = "white";
+                thingB.innerText = "The Lion’s Mane jellyfish is found in the Northern Hemisphere of North America. This jellyfish is the largest in the world, sometimes measuring up to larger than a blue whale. Its sting is painful but not lethal and each tentacle can be meters long.";
+            } else if (helpful % 2 == 0) {
+                thingA.style.backgroundImage = "url()";
+                thingB.style.backgroundColor = "";
+                thingB.innerText = "";
+            }
+
+
+        };
+    });
+    document.body.addEventListener("keydown", function(x) {
+        console.log(x.keyCode);
+        if (x.keyCode == 66) {
+            helpful = helpful + 1;
+            console.log(helpful);
+
+            if (helpful % 2 == 1) {
+                thingA.style.backgroundImage = "url(b.gif)";
+                thingB.style.backgroundColor = "white";
+                thingB.innerText = "The Immortal Jellyfish are generally found around Japan, warmer areas of the Pacific Ocean, and the Mediterranean Sea. This type of jellyfish has the potential to live forever because it can always return to a polyp form. Immortal Jellyfish, while poisonous, are not as dangerous as box jellyfish (like Irukandji jellyfish).";
+                
+
+
+            } else if (helpful % 2 == 0) {
+                thingA.style.backgroundImage = "url()";
+                thingB.style.backgroundColor = "";
+                thingB.innerText = "";
+            }
+
+
+        };
+    });
+
+    document.body.addEventListener("keydown", function(x) {
+        console.log(x.keyCode);
+        if (x.keyCode == 67) {
+            helpful = helpful + 1;
+            console.log(helpful);
+
+            if (helpful % 2 == 1) {
+                thingA.style.backgroundImage = "url(c.gif)";
+                thingB.style.backgroundColor = "white";
+                thingB.innerText = "Halitrephes maasi are a deep sea hydrozoan branch of jellyfish. They live off of the Western Coast  of the Americas about 4000 feet below the surface. Although they have poisons in their sting, they are not harmful to humans. This particular kind of jellyfish is known as a moon jelly because of its slightly translucent and globular bell.";
+            } else if (helpful % 2 == 0) {
+                thingA.style.backgroundImage = "url()";
+                thingB.style.backgroundColor = "";
+                thingB.innerText = "";
+            }
+
+
+        };
+    });
+
+    document.body.addEventListener("keydown", function(x) {
+        console.log(x.keyCode);
+        if (x.keyCode == 68) {
+            helpful = helpful + 1;
+            console.log(helpful);
+
+            if (helpful % 2 == 1) {
+                thingA.style.backgroundImage = "url(d.gif)";
+                thingB.style.backgroundColor = "white";
+                thingB.innerText = "The Portuguese Man O’ War is a type of animal found in Brazil. Although it is not a jellyfish, it is very close to the ctenophore groups of animals. The siphonophore is actually made up of many types of organisms called zooids.";
+            } else if (helpful % 2 == 0) {
+                thingA.style.backgroundImage = "url()";
+                thingB.style.backgroundColor = "";
+                thingB.innerText = "";
+            }
+
+
+        };
+    });
+
+    document.body.addEventListener("keydown", function(x) {
+        console.log(x.keyCode);
+        if (x.keyCode == 69) {
+            helpful = helpful + 1;
+            console.log(helpful);
+
+            if (helpful % 2 == 1) {
+                thingA.style.backgroundImage = "url(e.jpg)";
+                thingB.style.backgroundColor = "white";
+                thingB.innerText = "Irukandji jellyfish are most commonly found in Australia and are the smallest jellyfish in the world. Although small, their sting is lethal and kills in minutes. They are especially dangerous because not only are their tentacles poisonous, but their bell is also poisonous.";
+            } else if (helpful % 2 == 0) {
+                thingA.style.backgroundImage = "url()";
+                thingB.style.backgroundColor = "";
+                thingB.innerText = "";
+            }
+
+
+        };
+    });
+    </script>
+</body>
+
+</html>
