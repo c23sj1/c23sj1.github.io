@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    .starlings {
+        width: 150px;
+        height: 100px;
+        background-image: url(https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmPQKGbC3mjgfzsMY7uuuq1mozidNbea3oca1YGG5QTKn6/quadrocopter-1658967__480.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        transition: opacity 1s ease-out;
+
+    }
+    </style>
+</head>
+
+<body>
+    <div class="starlings"></div>
+    <script type="text/javascript">
+    function makeStarling() {
+        var starling = document.createElement("div");
+        document.body.appendChild(starling);
+        starling.classList.add("starlings");
+        starling.style.transition = "0.5s";
+        starling.style.backgroundSize = "cover";
+        starling.style.display = "inline-block";
+        starling.style.position = "relative";
+
+        function setPosition() {
+            starling.style.left = Math.random() * 200 + "px";
+            starling.style.top = Math.random() * 200 + "px";
+        }
+
+        var move =
+            setInterval(setPosition, 1000);
+
+    }
+
+    for (var i = 0; i < 500; i = i + 1) {
+        makeStarling();
+    }
+
+
+    </script>
+</body>
+
+</html>
