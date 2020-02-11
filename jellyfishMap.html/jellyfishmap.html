@@ -42,6 +42,11 @@
         left: 50%;
         padding: 10px;
     }
+
+    h1 {
+        color: blue;
+        font-family: 'Lemonada', cursive;
+    }
     </style>
 </head>
 
@@ -49,9 +54,12 @@
     <div id="everything">
         <div class="something" id="thing1"></div>
         <div class="something" id="thing2"></div>
+        <center>
+            <h1>type the letters on the map :)</h1>
+        </center>
     </div>
     <script type="text/javascript">
-        var everything =  document.getElementById("everything");
+    var everything = document.getElementById("everything");
     var thingA = document.getElementById("thing1");
     var thingB = document.getElementById("thing2");
 
@@ -88,7 +96,7 @@
                 thingA.style.backgroundImage = "url(b.gif)";
                 thingB.style.backgroundColor = "white";
                 thingB.innerText = "The Immortal Jellyfish are generally found around Japan, warmer areas of the Pacific Ocean, and the Mediterranean Sea. This type of jellyfish has the potential to live forever because it can always return to a polyp form. Immortal Jellyfish, while poisonous, are not as dangerous as box jellyfish (like Irukandji jellyfish).";
-                
+
 
 
             } else if (helpful % 2 == 0) {
