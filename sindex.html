@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- test -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@382&display=swap" rel="stylesheet">
+        <style type="text/css">
+        p {
+            font-family: 'Oswald', sans-serif;
+            color: red;
+            font-size: 50px;
+        }
+
+        #script {
+        	padding-left: 1000px;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="div">
+    	<center>
+        <script src="p5.js" id="script">
+            function setup() {
+            createCanvas(720, 720);
+            stroke(150, 50, 120);
+            noLoop();
+}
+
+function draw() {
+  makeAlien(width / 2, 280, 6);
+  arc(359, 489, 50, 50, 0, PI, CHORD);
+  ellipse(219.7, 358, 40, 40);
+  ellipse(500, 358, 40, 40);
+    ellipse (219.7, 358, 10, 10);
+    ellipse (500, 358, 10, 10);
+}
+
+function makeAlien(x, radius, level) {
+  const thing = (126 * level) / 4.0;
+  fill(thing);
+  ellipse(x, height / 2, radius * 2, radius * 2);
+  if (level > 0.5) {
+    level = level - 1;
+    makeAlien(x - radius / 2, radius / 2, level);
+    makeAlien(x + radius / 2, radius / 2, level);
+  }
+}
+var i;
+
+    for (i = 0; i < 100; i = i + 1) {
+        draw();
+    };
+    </script> </center>
+        <script src="p5.sound.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <script src="sketch.js"></script>
+
+   <center> <p>i do not come in peace</p></center>
+        </div>
+</body>
+
+</html>
