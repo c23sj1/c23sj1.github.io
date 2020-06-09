@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>alien</title>
+    <style type="text/css">
+        body {
+            background-color: purple;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+    function luckyducky() {
+        var lucky = document.createElement("div");
+        lucky.style.height = "1000px";
+        lucky.style.width = "2150px";
+        document.body.style.background = "url('out.png')";
+        document.body.appendChild(lucky);
+        lucky.style.backgroundSize = "cover";
+    };
+
+    var i;
+
+    for (i = 0; i < 1000; i = i + 1) {
+        luckyducky();
+    };
+    </script>
+
+</body>
+
+</html>
